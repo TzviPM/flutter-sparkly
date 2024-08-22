@@ -1,39 +1,36 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# flutter_sparkly
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/tools/pub/writing-package-pages).
+Made with ❤️ by [TzviPM](https://www.tzvipm.dev/)
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/to/develop-packages).
--->
+> Make your Flutter app more ✨sparkly✨
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+Inspired by [`react-sparkle`](https://www.npmjs.com/package/react-sparkle) and built to enable "sparkles mode" in a game I built for my son.
+
+You are free to copy, modify, and distribute `flutter_sparkly` with attribution under the terms of the MIT license. See the LICENSE file for details.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+Simply set up your flutter project, then add `flutter_sparkly` using [this guide](https://pub.dev/packages/flutter_sparkly/install).
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+Simply surround any component with `Sparkly` to make it shine ✨
 
 ```dart
-const like = 'sample';
+class SparklyText extends StatelessWidget {
+  final String text;
+
+  const SparklyText({super.key, required this.text});
+
+  @override
+  Widget build(BuildContext context) {
+    return Sparkly(
+      child: Text(text),
+    );
+  }
+}
 ```
-
-## Additional information
-
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
